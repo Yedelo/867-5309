@@ -12,8 +12,14 @@ public interface AccessorEntityRenderer {
     @Accessor("shaderIndex")
     int essfton$getShaderIndex();
 
+    @Accessor("shaderIndex")
+    void essfton$setShaderIndex(int index);
+
     @Accessor("theShaderGroup")
     ShaderGroup essfton$getShaderGroup();
+
+    @Accessor("theShaderGroup")
+    void essfton$setShaderGroup(ShaderGroup group);
 
     @Accessor("shaderResourceLocations")
     ResourceLocation[] essfton$getShaderResourceLocations();
