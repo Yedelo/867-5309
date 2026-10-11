@@ -15,7 +15,7 @@ public class ShaderListGui extends GuiListExtended {
     private final FontRenderer fontRenderer;
 
     public ShaderListGui(EssftonGui gui, FontRenderer fontRenderer) {
-        super(Minecraft.getMinecraft(), gui.width, gui.height, 63, gui.height - 32, 18);
+        super(Minecraft.getMinecraft(), gui.width, gui.height, 32, gui.height - 32, 18);
         this.fontRenderer = fontRenderer;
         entries.add(new ShaderEntry(fontRenderer));
         entries.add(new ShaderEntry(fontRenderer));
