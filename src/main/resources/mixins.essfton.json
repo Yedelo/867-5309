@@ -4,6 +4,6 @@
   "minVersion": "${mixinMin}",
   "compatibilityLevel": "${mixinJava}",
   "client": [
-
+    "MixinGuiOptions"
   ]
 }
