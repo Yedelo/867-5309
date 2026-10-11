@@ -47,9 +47,9 @@ public class EssftonGui extends GuiScreen {
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         drawDefaultBackground();
+        shaderListGui.drawScreen(mouseX, mouseY, partialTicks);
         drawCenteredString("Super Secret Settings List", 5);
         drawCenteredString("§7Provided by Essfton", 15);
-        shaderListGui.drawScreen(mouseX, mouseY, partialTicks);
         fontRendererObj.drawString("§7Version " + EssftonConstants.MOD_VERSION, 5, height - 15, 0xFFFFFF, true);
     }
 
