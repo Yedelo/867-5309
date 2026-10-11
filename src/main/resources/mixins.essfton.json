@@ -4,6 +4,7 @@
   "minVersion": "${mixinMin}",
   "compatibilityLevel": "${mixinJava}",
   "client": [
+    "AccessorEntityRenderer",
     "MixinGuiOptions"
   ]
 }
