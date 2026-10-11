@@ -62,7 +62,7 @@ public class EssftonGui extends GuiScreen {
     }
 
     private static class ShaderList extends GuiSlot {
-        private final List<String> ENTRIES = List.of("None", "First Shader", "Second Shader");
+        private final List<String> ENTRIES = List.of("None", "Notch", "FXAA", "Art", "Bumpy", "Blobs 2", "Pencil", "Color Convolve", "Deconverge", "Flip", "Invert", "NTSC", "Phosphor", "Scan Pincushion", "Sobel", "Bits", "Desaturate", "Green", "Blur", "Wobble", "Blobs", "Antialias", "Creeper", "Spider");
         private final EssftonGui gui;
 
         public ShaderList(EssftonGui gui) {
