@@ -5,6 +5,7 @@
   "compatibilityLevel": "${mixinJava}",
   "client": [
     "AccessorEntityRenderer",
-    "MixinGuiOptions"
+    "MixinGuiOptions",
+    "MixinSuperSecretSettingsButton"
   ]
 }
