@@ -1,3 +1,3 @@
 ## **1.0.0**
 
-- Add ornithe support
+Initial release
