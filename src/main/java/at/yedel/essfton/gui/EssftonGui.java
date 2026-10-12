@@ -17,6 +17,7 @@ public class EssftonGui extends GuiScreen {
     private final GuiScreen parentScreen;
     private ShaderList shaderList;
     private int selectedEntry = 0;
+    private GuiButton imFeelingLuckyButton;
     private GuiButton applyButton;
     private GuiButton doneButton;
 
@@ -25,10 +26,15 @@ public class EssftonGui extends GuiScreen {
     }
     
     public void initGui() {
-        this.shaderList = new ShaderList(this);
-        this.shaderList.registerScrollButtons(7, 8);
-        this.buttonList.add(applyButton = new GuiButton(867, this.width / 2 - 155, this.height - 25, 150, 20, "Apply"));
-        this.buttonList.add(doneButton = new GuiButton(5309, this.width / 2 + 5, this.height - 25, 150, 20, "Done"));
+        shaderList = new ShaderList(this);
+        shaderList.registerScrollButtons(7, 8);
+        int buttonWidth = 120;
+        int left = width / 2 - (buttonWidth / 2 + buttonWidth) - 5;
+        int middle = width / 2 - buttonWidth / 2;
+        int right = width / 2 + (buttonWidth / 2 + 5);
+        buttonList.add(imFeelingLuckyButton = new GuiButton(420, left, height - 25, buttonWidth, 20, "I'm Feeling Lucky"));
+        buttonList.add(applyButton = new GuiButton(867, middle, height - 25, buttonWidth, 20, "Apply"));
+        buttonList.add(doneButton = new GuiButton(5309, right, height - 25, buttonWidth, 20, "Done"));
         if (mc.entityRenderer != null) {
             AccessorEntityRenderer renderer = (AccessorEntityRenderer) mc.entityRenderer;
             selectedEntry = convertShaderIndexToEntry(renderer.essfton$getShaderIndex());
@@ -42,7 +48,10 @@ public class EssftonGui extends GuiScreen {
     
     protected void actionPerformed(GuiButton button) {
         if (button.enabled) {
-            if (button == applyButton) {
+            if (button == imFeelingLuckyButton) {
+                imFeelingLucky();
+            }
+            else if (button == applyButton) {
                 apply();
             }
             else if (button == doneButton) {
@@ -52,6 +61,12 @@ public class EssftonGui extends GuiScreen {
                 shaderList.actionPerformed(button);
             }
         }
+    }
+
+    private void imFeelingLucky() {
+        selectedEntry = 1 + (int) (Math.random() * ((shaderList.getSize() - 1) + 1));
+        checkShader();
+        Minecraft.getMinecraft().displayGuiScreen(parentScreen);
     }
 
     private void apply() {
