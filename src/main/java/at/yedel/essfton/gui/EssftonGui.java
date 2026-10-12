@@ -1,5 +1,6 @@
 package at.yedel.essfton.gui;
 
+import at.yedel.essfton.launch.EssftonConstants;
 import at.yedel.essfton.mixin.AccessorEntityRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
@@ -100,7 +101,7 @@ public class EssftonGui extends GuiScreen {
         drawDefaultBackground();
         this.shaderList.drawScreen(mouseX, mouseY, partialTicks);
         this.drawCenteredString(this.fontRendererObj, "Super Secret Settings", this.width / 2, 5, 0xFFFFFF);
-        this.drawCenteredString(this.fontRendererObj, "§7Provided by Essfton", this.width / 2, 15, 0xFFFFFF);
+        this.drawCenteredString(this.fontRendererObj, "§7Essfton " + EssftonConstants.MOD_VERSION, this.width / 2, 15, 0xFFFFFF);
         super.drawScreen(mouseX, mouseY, partialTicks);
     }
 
