@@ -9,3 +9,8 @@
 ![Modrinth Version](https://img.shields.io/modrinth/v/nJqm2sE2?label=Modrinth%20version)
 
 Adds enhancements to Super Secret Settings
+
+## Features
+
+- Super Secret Settings GUI
+- I'm Feeling Lucky button
