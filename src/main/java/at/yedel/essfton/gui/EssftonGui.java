@@ -12,6 +12,8 @@ import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 
+import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 public class EssftonGui extends GuiScreen {
@@ -42,7 +44,7 @@ public class EssftonGui extends GuiScreen {
         }
     }
     
-    public void handleMouseInput() {
+    public void handleMouseInput() /*? if forge {*/ throws IOException /*?}*/ {
         super.handleMouseInput();
         this.shaderList.handleMouseInput();
     }
@@ -116,7 +118,7 @@ public class EssftonGui extends GuiScreen {
     }
 
     private static class ShaderList extends GuiSlot {
-        private final List<String> ENTRIES = List.of("None", "Notch", "FXAA", "Art", "Bumpy", "Blobs 2", "Pencil", "Color Convolve", "Deconverge", "Flip", "Invert", "NTSC", "Outline", "Phosphor", "Scan Pincushion", "Sobel", "Bits", "Desaturate", "Green", "Blur", "Wobble", "Blobs", "Antialias", "Creeper", "Spider");
+        private final List<String> ENTRIES = Arrays.asList("None", "Notch", "FXAA", "Art", "Bumpy", "Blobs 2", "Pencil", "Color Convolve", "Deconverge", "Flip", "Invert", "NTSC", "Outline", "Phosphor", "Scan Pincushion", "Sobel", "Bits", "Desaturate", "Green", "Blur", "Wobble", "Blobs", "Antialias", "Creeper", "Spider");
         private final EssftonGui gui;
 
         public ShaderList(EssftonGui gui) {
