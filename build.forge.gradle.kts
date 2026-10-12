@@ -41,7 +41,9 @@ plugins {
 }
 
 dependencies {
-    compileOnly("org.spongepowered:mixin:0.7.11-SNAPSHOT")
+    listOf("implementation", "shade").forEach {
+        it("org.spongepowered:mixin:0.7.11-SNAPSHOT")
+    }
 }
 
 toolkitLoomHelper {
