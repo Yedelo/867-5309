@@ -1,5 +1,5 @@
 //? if forge {
-package at.yedel.essfton;
+/*package at.yedel.essfton;
 
 import at.yedel.essfton.launch.EssftonConstants;
 import net.minecraftforge.fml.common.Mod;
@@ -11,4 +11,4 @@ import net.minecraftforge.fml.common.Mod;
         clientSideOnly = true
 )
 public class Essfton { }
-//?}
+*///?}

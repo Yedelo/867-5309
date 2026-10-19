@@ -44,7 +44,7 @@ public class EssftonGui extends GuiScreen {
         }
     }
     
-    public void handleMouseInput() /*? if forge {*/ throws IOException /*?}*/ {
+    public void handleMouseInput() /*? if forge {*/ /*throws IOException *//*?}*/ {
         super.handleMouseInput();
         this.shaderList.handleMouseInput();
     }
